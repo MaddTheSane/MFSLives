@@ -118,10 +118,6 @@ extern void             lck_mtx_assert(
 #define LCK_MTX_ASSERT_OWNED    0x01
 #define LCK_MTX_ASSERT_NOTOWNED 0x02
 
-#pragma mark ----- <sys/types.h.h>
-
-typedef uint32_t ino_t;
-
 #pragma mark ----- <sys/kernel_types.h>
 
 typedef int errno_t;

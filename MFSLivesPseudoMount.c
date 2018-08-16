@@ -67,6 +67,7 @@ First checked in.
 #include <sys/mman.h>
 #include <sys/param.h>
 #include <sys/xattr.h>
+#include <libkern/OSByteOrder.h>
 
 #include "MFSCore.h"
 

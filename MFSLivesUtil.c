@@ -72,6 +72,7 @@ First checked in.
 #include <sys/loadable_fs.h>
 #include <sys/mman.h>
 #include <sys/xattr.h>
+#include <libkern/OSByteOrder.h>
 
 // MFS core code
 
