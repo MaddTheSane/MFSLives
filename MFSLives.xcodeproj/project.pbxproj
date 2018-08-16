@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 42;
+	objectVersion = 46;
 	objects = {
 
 /* Begin PBXAggregateTarget section */
@@ -24,6 +24,7 @@
 
 /* Begin PBXBuildFile section */
 		32A4FEBE0562C75700D090E7 /* MFSLives.c in Sources */ = {isa = PBXBuildFile; fileRef = 1A224C3CFF42312311CA2CB7 /* MFSLives.c */; settings = {ATTRIBUTES = (); }; };
+		5531EF09212505760017D71F /* InfoPlist.stringsdict in Resources */ = {isa = PBXBuildFile; fileRef = E49F25800AE533D100ACEFFC /* InfoPlist.stringsdict */; };
 		E41288500A616A730030D797 /* TableGenerator.c in Sources */ = {isa = PBXBuildFile; fileRef = E412883B0A616A420030D797 /* TableGenerator.c */; };
 		E41288520A616A730030D797 /* CoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E44A745D0A5AB50B004DBCCD /* CoreServices.framework */; };
 		E425DC750A6BA8CF0078E054 /* utf8_decodestr.c in Sources */ = {isa = PBXBuildFile; fileRef = E425DC740A6BA8CF0078E054 /* utf8_decodestr.c */; };
@@ -40,12 +41,11 @@
 		E44A76380A5AB95E004DBCCD /* MFSCore.c in Sources */ = {isa = PBXBuildFile; fileRef = E44A76350A5AB95E004DBCCD /* MFSCore.c */; };
 		E45E447908A8E4DA0059CA8C /* MountMFSLives.c in Sources */ = {isa = PBXBuildFile; fileRef = E45E447808A8E4DA0059CA8C /* MountMFSLives.c */; };
 		E46AC637087C2367007C29A0 /* MFSLivesMountArgs.h in Headers */ = {isa = PBXBuildFile; fileRef = E46AC636087C2367007C29A0 /* MFSLivesMountArgs.h */; };
-		E49F25810AE533D100ACEFFC /* InfoPlist.strings in CopyFiles */ = {isa = PBXBuildFile; fileRef = E49F25800AE533D100ACEFFC /* InfoPlist.strings */; };
 		E4D841150A73AA9C00BEA822 /* MFSLivesPseudoMount.c in Sources */ = {isa = PBXBuildFile; fileRef = E4D841140A73AA9C00BEA822 /* MFSLivesPseudoMount.c */; };
 		E4D841160A73AA9C00BEA822 /* MFSLivesPseudoMount.c in Sources */ = {isa = PBXBuildFile; fileRef = E4D841140A73AA9C00BEA822 /* MFSLivesPseudoMount.c */; };
-		E4F356750A659ECC003476CC /* mount_MFSLives in CopyFiles */ = {isa = PBXBuildFile; fileRef = E45E444208A8E2C50059CA8C /* mount_MFSLives */; };
-		E4F3569E0A65A387003476CC /* MFSLives.kext in CopyFiles */ = {isa = PBXBuildFile; fileRef = 32A4FEC40562C75800D090E7 /* MFSLives.kext */; };
-		E4F356A10A65A397003476CC /* MFSLives.util in CopyFiles */ = {isa = PBXBuildFile; fileRef = E4F356920A65A293003476CC /* MFSLives.util */; };
+		E4F356750A659ECC003476CC /* mount_MFSLives in CopyFiles */ = {isa = PBXBuildFile; fileRef = E45E444208A8E2C50059CA8C /* mount_MFSLives */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		E4F3569E0A65A387003476CC /* MFSLives.kext in CopyFiles */ = {isa = PBXBuildFile; fileRef = 32A4FEC40562C75800D090E7 /* MFSLives.kext */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		E4F356A10A65A397003476CC /* MFSLives.util in CopyFiles */ = {isa = PBXBuildFile; fileRef = E4F356920A65A293003476CC /* MFSLives.util */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		E4F356A50A65A3CB003476CC /* MFSLivesUtil.c in Sources */ = {isa = PBXBuildFile; fileRef = E4F356A40A65A3CB003476CC /* MFSLivesUtil.c */; };
 		E4F356E30A65A872003476CC /* MFSCore.c in Sources */ = {isa = PBXBuildFile; fileRef = E44A76350A5AB95E004DBCCD /* MFSCore.c */; };
 /* End PBXBuildFile section */
@@ -114,7 +114,6 @@
 			files = (
 				E4F356750A659ECC003476CC /* mount_MFSLives in CopyFiles */,
 				E4F356A10A65A397003476CC /* MFSLives.util in CopyFiles */,
-				E49F25810AE533D100ACEFFC /* InfoPlist.strings in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -122,9 +121,9 @@
 
 /* Begin PBXFileReference section */
 		1A224C3CFF42312311CA2CB7 /* MFSLives.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = MFSLives.c; sourceTree = "<group>"; };
-		32A4FEC30562C75700D090E7 /* KEXTInfo.plist */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = KEXTInfo.plist; sourceTree = "<group>"; };
+		32A4FEC30562C75700D090E7 /* KEXTInfo.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = KEXTInfo.plist; sourceTree = "<group>"; };
 		32A4FEC40562C75800D090E7 /* MFSLives.kext */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MFSLives.kext; sourceTree = BUILT_PRODUCTS_DIR; };
-		D27513B306A6225300ADB3A4 /* Kernel.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kernel.framework; path = /System/Library/Frameworks/Kernel.framework; sourceTree = "<absolute>"; };
+		D27513B306A6225300ADB3A4 /* Kernel.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kernel.framework; path = System/Library/Frameworks/Kernel.framework; sourceTree = SDKROOT; };
 		E412883B0A616A420030D797 /* TableGenerator.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = TableGenerator.c; sourceTree = "<group>"; };
 		E41288560A616A730030D797 /* TableGenerator */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = TableGenerator; sourceTree = BUILT_PRODUCTS_DIR; };
 		E425DC730A6BA8CF0078E054 /* utf8_decodestr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = utf8_decodestr.h; sourceTree = "<group>"; };
@@ -135,21 +134,21 @@
 		E44A70AB0A5AB3F0004DBCCD /* UserSpaceKernel.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = UserSpaceKernel.c; sourceTree = "<group>"; };
 		E44A70AC0A5AB3F0004DBCCD /* UserSpaceKernel.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = UserSpaceKernel.h; sourceTree = "<group>"; };
 		E44A70AE0A5AB3F4004DBCCD /* TestMFSLives.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = TestMFSLives.c; sourceTree = "<group>"; };
-		E44A745C0A5AB50B004DBCCD /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = /System/Library/Frameworks/CoreFoundation.framework; sourceTree = "<absolute>"; };
-		E44A745D0A5AB50B004DBCCD /* CoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreServices.framework; path = /System/Library/Frameworks/CoreServices.framework; sourceTree = "<absolute>"; };
+		E44A745C0A5AB50B004DBCCD /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		E44A745D0A5AB50B004DBCCD /* CoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreServices.framework; path = System/Library/Frameworks/CoreServices.framework; sourceTree = SDKROOT; };
 		E44A76340A5AB95E004DBCCD /* MFSCore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MFSCore.h; sourceTree = "<group>"; };
 		E44A76350A5AB95E004DBCCD /* MFSCore.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = MFSCore.c; sourceTree = "<group>"; };
-		E45E444208A8E2C50059CA8C /* mount_MFSLives */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = "compiled.mach-o.executable"; path = mount_MFSLives; sourceTree = BUILT_PRODUCTS_DIR; };
+		E45E444208A8E2C50059CA8C /* mount_MFSLives */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = mount_MFSLives; sourceTree = BUILT_PRODUCTS_DIR; };
 		E45E447808A8E4DA0059CA8C /* MountMFSLives.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = MountMFSLives.c; sourceTree = "<group>"; };
 		E46AC636087C2367007C29A0 /* MFSLivesMountArgs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MFSLivesMountArgs.h; sourceTree = "<group>"; };
-		E49F257E0AE533CB00ACEFFC /* English */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.xml; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		E49F25820AE533D800ACEFFC /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = fr; path = fr.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		E49F257E0AE533CB00ACEFFC /* en */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.plist.stringsdict; name = en; path = en.lproj/InfoPlist.stringsdict; sourceTree = "<group>"; };
+		E49F25820AE533D800ACEFFC /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; name = fr; path = fr.lproj/InfoPlist.stringsdict; sourceTree = "<group>"; };
 		E4D03B490A7664BF00960318 /* MFSLives.kext.exp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.exports; path = MFSLives.kext.exp; sourceTree = "<group>"; };
 		E4D841130A73AA9C00BEA822 /* MFSLivesPseudoMount.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MFSLivesPseudoMount.h; sourceTree = "<group>"; };
 		E4D841140A73AA9C00BEA822 /* MFSLivesPseudoMount.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = MFSLivesPseudoMount.c; sourceTree = "<group>"; };
 		E4E9FDE60A66E44300FEDE4A /* VNodeAttr.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = VNodeAttr.h; sourceTree = "<group>"; };
 		E4F3564B0A659DAE003476CC /* MFSLives.fs */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MFSLives.fs; sourceTree = BUILT_PRODUCTS_DIR; };
-		E4F3565F0A659E3A003476CC /* FSBundle.plist */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.xml; path = FSBundle.plist; sourceTree = "<group>"; };
+		E4F3565F0A659E3A003476CC /* FSBundle-Info.plist */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.plist.xml; path = "FSBundle-Info.plist"; sourceTree = "<group>"; };
 		E4F356920A65A293003476CC /* MFSLives.util */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = MFSLives.util; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4F356A40A65A3CB003476CC /* MFSLivesUtil.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = MFSLivesUtil.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -199,19 +198,11 @@
 		089C166AFE841209C02AAC07 /* EmptyFS */ = {
 			isa = PBXGroup;
 			children = (
-				1A224C3CFF42312311CA2CB7 /* MFSLives.c */,
-				E44A76340A5AB95E004DBCCD /* MFSCore.h */,
-				E44A76350A5AB95E004DBCCD /* MFSCore.c */,
-				E46AC636087C2367007C29A0 /* MFSLivesMountArgs.h */,
-				E44A70A70A5AB3EA004DBCCD /* HashNode.h */,
-				E44A70A60A5AB3EA004DBCCD /* HashNode.c */,
-				E4D03B490A7664BF00960318 /* MFSLives.kext.exp */,
-				32A4FEC30562C75700D090E7 /* KEXTInfo.plist */,
-				E4F3565F0A659E3A003476CC /* FSBundle.plist */,
-				E49F25800AE533D100ACEFFC /* InfoPlist.strings */,
-				D27513B306A6225300ADB3A4 /* Kernel.framework */,
+				5531EF0A212510A90017D71F /* KEXT */,
+				5531EF0B212510B20017D71F /* FSBundle */,
 				E44A70B70A5AB413004DBCCD /* Tools */,
 				E44A70B20A5AB3FE004DBCCD /* Tests */,
+				5531EF07212503DC0017D71F /* Frameworks */,
 				19C28FB6FE9D52B211CA2CBB /* Products */,
 			);
 			name = EmptyFS;
@@ -230,14 +221,46 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		5531EF07212503DC0017D71F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D27513B306A6225300ADB3A4 /* Kernel.framework */,
+				E44A745C0A5AB50B004DBCCD /* CoreFoundation.framework */,
+				E44A745D0A5AB50B004DBCCD /* CoreServices.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5531EF0A212510A90017D71F /* KEXT */ = {
+			isa = PBXGroup;
+			children = (
+				1A224C3CFF42312311CA2CB7 /* MFSLives.c */,
+				E44A76340A5AB95E004DBCCD /* MFSCore.h */,
+				E44A76350A5AB95E004DBCCD /* MFSCore.c */,
+				E46AC636087C2367007C29A0 /* MFSLivesMountArgs.h */,
+				E44A70A70A5AB3EA004DBCCD /* HashNode.h */,
+				E44A70A60A5AB3EA004DBCCD /* HashNode.c */,
+				E4D03B490A7664BF00960318 /* MFSLives.kext.exp */,
+				32A4FEC30562C75700D090E7 /* KEXTInfo.plist */,
+			);
+			name = KEXT;
+			sourceTree = "<group>";
+		};
+		5531EF0B212510B20017D71F /* FSBundle */ = {
+			isa = PBXGroup;
+			children = (
+				E4F3565F0A659E3A003476CC /* FSBundle-Info.plist */,
+				E49F25800AE533D100ACEFFC /* InfoPlist.stringsdict */,
+			);
+			name = FSBundle;
+			sourceTree = "<group>";
+		};
 		E44A70B20A5AB3FE004DBCCD /* Tests */ = {
 			isa = PBXGroup;
 			children = (
 				E44A70AE0A5AB3F4004DBCCD /* TestMFSLives.c */,
 				E44A70AC0A5AB3F0004DBCCD /* UserSpaceKernel.h */,
 				E44A70AB0A5AB3F0004DBCCD /* UserSpaceKernel.c */,
-				E44A745C0A5AB50B004DBCCD /* CoreFoundation.framework */,
-				E44A745D0A5AB50B004DBCCD /* CoreServices.framework */,
 			);
 			name = Tests;
 			sourceTree = "<group>";
@@ -345,6 +368,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E4F356470A659DAE003476CC /* Build configuration list for PBXNativeTarget "FSBundle" */;
 			buildPhases = (
+				5531EF08212505690017D71F /* Resources */,
 				E4F356710A659EA4003476CC /* CopyFiles */,
 				E473A8210AE51C8B009D9D39 /* CopyFiles */,
 			);
@@ -382,17 +406,22 @@
 /* Begin PBXProject section */
 		089C1669FE841209C02AAC07 /* Project object */ = {
 			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0940;
+			};
 			buildConfigurationList = E46AC497087558F9007C29A0 /* Build configuration list for PBXProject "MFSLives" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = en;
 			hasScannedForEncodings = 1;
 			knownRegions = (
-				English,
-				Japanese,
-				French,
-				German,
+				en,
+				ja,
 				fr,
+				de,
 			);
 			mainGroup = 089C166AFE841209C02AAC07 /* EmptyFS */;
 			projectDirPath = "";
+			projectRoot = "";
 			targets = (
 				E45E449C08A8E7290059CA8C /* All */,
 				E4F356410A659DAE003476CC /* FSBundle */,
@@ -410,6 +439,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5531EF08212505690017D71F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5531EF09212505760017D71F /* InfoPlist.stringsdict in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -512,13 +549,13 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		E49F25800AE533D100ACEFFC /* InfoPlist.strings */ = {
+		E49F25800AE533D100ACEFFC /* InfoPlist.stringsdict */ = {
 			isa = PBXVariantGroup;
 			children = (
-				E49F257E0AE533CB00ACEFFC /* English */,
+				E49F257E0AE533CB00ACEFFC /* en */,
 				E49F25820AE533D800ACEFFC /* fr */,
 			);
-			name = InfoPlist.strings;
+			name = InfoPlist.stringsdict;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -527,6 +564,7 @@
 		E41288540A616A730030D797 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = YES;
 				PRODUCT_NAME = TableGenerator;
 			};
 			name = Debug;
@@ -534,6 +572,7 @@
 		E41288550A616A730030D797 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = YES;
 				PRODUCT_NAME = TableGenerator;
 			};
 			name = Release;
@@ -541,7 +580,7 @@
 		E44A709C0A5AB3B6004DBCCD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(VictimArch)";
+				CLANG_ENABLE_OBJC_WEAK = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = "MACH_ASSERT=1";
 				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = NO;
 				OTHER_LDFLAGS = "-liconv";
@@ -552,6 +591,7 @@
 		E44A709D0A5AB3B6004DBCCD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = "MACH_ASSERT=1";
 				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = NO;
 				OTHER_LDFLAGS = "-liconv";
@@ -562,7 +602,7 @@
 		E45E444E08A8E3670059CA8C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(VictimArch)";
+				CLANG_ENABLE_OBJC_WEAK = YES;
 				PRODUCT_NAME = mount_MFSLives;
 			};
 			name = Debug;
@@ -570,6 +610,7 @@
 		E45E444F08A8E3670059CA8C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = YES;
 				PRODUCT_NAME = mount_MFSLives;
 			};
 			name = Release;
@@ -577,6 +618,7 @@
 		E45E44A408A8E7320059CA8C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = YES;
 				COPY_PHASE_STRIP = NO;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				OPTIMIZATION_CFLAGS = "-O0";
@@ -596,6 +638,7 @@
 		E45E44A508A8E7320059CA8C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = YES;
 				COPY_PHASE_STRIP = YES;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				OPTIMIZATION_CFLAGS = "-O0";
@@ -615,25 +658,22 @@
 		E46AC494087558F9007C29A0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(VictimArch)";
+				CLANG_ENABLE_OBJC_WEAK = YES;
 				EXPORTED_SYMBOLS_FILE = MFSLives.kext.exp;
 				GCC_PREPROCESSOR_DEFINITIONS = (
-					"$(GCC_PREPROCESSOR_DEFINITIONS)",
+					"$(inherited)",
 					"MODULE_START=$(MODULE_START)",
 					"MODULE_STOP=$(MODULE_STOP)",
 				);
 				INFOPLIST_FILE = KEXTInfo.plist;
 				INFOPLIST_PREPROCESS = YES;
-				INFOPLIST_PREPROCESSOR_DEFINITIONS = (
-					"MACH_ASSERT=1",
-					"KEXT_BUNDLE_ID=$(MODULE_NAME)",
-					"KEXT_VERSION=$(MODULE_VERSION)",
-				);
+				INFOPLIST_PREPROCESSOR_DEFINITIONS = "MACH_ASSERT=1";
 				MODULE_NAME = com.apple.dts.kext.MFSLives;
 				MODULE_NAME_ = com_apple_dts_kext_MFSLives;
 				MODULE_START = "$(MODULE_NAME_)_start";
 				MODULE_STOP = "$(MODULE_NAME_)_stop";
 				MODULE_VERSION = "$(MasterVersion)";
+				PRODUCT_BUNDLE_IDENTIFIER = "$(MODULE_NAME)";
 				PRODUCT_NAME = MFSLives;
 				WRAPPER_EXTENSION = kext;
 			};
@@ -642,24 +682,22 @@
 		E46AC495087558F9007C29A0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = YES;
 				EXPORTED_SYMBOLS_FILE = MFSLives.kext.exp;
 				GCC_PREPROCESSOR_DEFINITIONS = (
-					"$(GCC_PREPROCESSOR_DEFINITIONS)",
+					"$(inherited)",
 					"MODULE_START=$(MODULE_START)",
 					"MODULE_STOP=$(MODULE_STOP)",
 				);
 				INFOPLIST_FILE = KEXTInfo.plist;
 				INFOPLIST_PREPROCESS = YES;
-				INFOPLIST_PREPROCESSOR_DEFINITIONS = (
-					"MACH_ASSERT=0",
-					"KEXT_BUNDLE_ID=$(MODULE_NAME)",
-					"KEXT_VERSION=$(MODULE_VERSION)",
-				);
+				INFOPLIST_PREPROCESSOR_DEFINITIONS = "MACH_ASSERT=0";
 				MODULE_NAME = com.apple.dts.kext.MFSLives;
 				MODULE_NAME_ = com_apple_dts_kext_MFSLives;
 				MODULE_START = "$(MODULE_NAME_)_start";
 				MODULE_STOP = "$(MODULE_NAME_)_stop";
 				MODULE_VERSION = "$(MasterVersion)";
+				PRODUCT_BUNDLE_IDENTIFIER = "$(MODULE_NAME)";
 				PRODUCT_NAME = MFSLives;
 				STRIP_STYLE = "non-global";
 				WRAPPER_EXTENSION = kext;
@@ -669,23 +707,47 @@
 		E46AC498087558F9007C29A0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(NATIVE_ARCH)";
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEPLOYMENT_POSTPROCESSING = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = "MACH_ASSERT=1";
 				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_LABEL = YES;
 				GCC_WARN_UNUSED_PARAMETER = YES;
 				GCC_WARN_UNUSED_VALUE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.4;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				MasterVersion = 1.0;
-				PREBINDING = NO;
-				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
-				VictimArch = "ppc i386";
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
 				WARNING_CFLAGS = "-Wall";
 			};
 			name = Debug;
@@ -693,29 +755,48 @@
 		E46AC499087558F9007C29A0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = (
-					ppc,
-					i386,
-				);
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEPLOYMENT_POSTPROCESSING = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = s;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"MACH_ASSERT=0",
 					"NDEBUG=1",
 				);
 				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_LABEL = YES;
 				GCC_WARN_UNUSED_PARAMETER = YES;
 				GCC_WARN_UNUSED_VALUE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.4;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				MasterVersion = 1.0;
-				PREBINDING = NO;
-				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
-				VictimArch = "ppc i386";
+				SDKROOT = macosx;
 				WARNING_CFLAGS = "-Wall";
 			};
 			name = Release;
@@ -723,8 +804,10 @@
 		E4F356480A659DAE003476CC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = YES;
 				COPY_PHASE_STRIP = NO;
-				INFOPLIST_FILE = FSBundle.plist;
+				INFOPLIST_FILE = "FSBundle-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = com.apple.dts.filesystems.MFSLives;
 				PRODUCT_NAME = MFSLives;
 				WRAPPER_EXTENSION = fs;
 			};
@@ -733,8 +816,10 @@
 		E4F356490A659DAE003476CC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = YES;
 				COPY_PHASE_STRIP = NO;
-				INFOPLIST_FILE = FSBundle.plist;
+				INFOPLIST_FILE = "FSBundle-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = com.apple.dts.filesystems.MFSLives;
 				PRODUCT_NAME = MFSLives;
 				WRAPPER_EXTENSION = fs;
 			};
@@ -743,10 +828,7 @@
 		E4F356900A65A293003476CC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = (
-					ppc,
-					i386,
-				);
+				CLANG_ENABLE_OBJC_WEAK = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(GCC_PREPROCESSOR_DEFINITIONS)",
 					"USER_SPACE_TEST=1",
@@ -758,10 +840,7 @@
 		E4F356910A65A293003476CC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = (
-					ppc,
-					i386,
-				);
+				CLANG_ENABLE_OBJC_WEAK = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(GCC_PREPROCESSOR_DEFINITIONS)",
 					"USER_SPACE_TEST=1",
