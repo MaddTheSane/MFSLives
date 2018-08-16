@@ -1648,7 +1648,7 @@ static errno_t CopyOutDirEnt(uio_t uio, ino_t ino, uint8_t type, struct dirent *
     // Set up the fixed fields of the dirent.  Note that <x-man-page://5/dirent> 
     // requires that d_reclen be evenly divisible by 4.
     
-    dirEntBuf->d_fileno = ino;
+    dirEntBuf->d_ino = ino;
     dirEntBuf->d_reclen = (offsetof(struct dirent, d_name) + nameLen + 1 + 3) & ~3;     // +1 to include null, +3 & 3 to round to next 4 byte boundary
     dirEntBuf->d_type   = type;
     dirEntBuf->d_namlen = nameLen;
@@ -2198,7 +2198,7 @@ static errno_t VNOPReadDir(struct vnop_readdir_args *ap)
                 assert(trustDirOffset);
                 
                 if (dirOffset == 0) {
-                    strcpy(dirEntBuf->d_name, ".");
+                    strncpy(dirEntBuf->d_name, ".", __DARWIN_MAXNAMLEN);
                     err = CopyOutDirEnt(uio, kMFSRootInodeNumber, DT_DIR, dirEntBuf);
                     if (err == 0) {
                         dirOffset = 1;
@@ -2206,7 +2206,7 @@ static errno_t VNOPReadDir(struct vnop_readdir_args *ap)
                     }
                 }
                 if ( (err == 0) && (dirOffset == 1) ) {
-                    strcpy(dirEntBuf->d_name, ".");
+                    strncpy(dirEntBuf->d_name, ".", __DARWIN_MAXNAMLEN);
                     err = CopyOutDirEnt(uio, kMFSRootInodeNumber, DT_DIR, dirEntBuf);
                     if (err == 0) {
                         dirBlock = fsmp->fDirectoryStartBlock;
@@ -3858,7 +3858,9 @@ static struct vfsops gVFSOps = {
     NULL,                                       // vfs_init     -- optional
     NULL,                                       // vfs_sysctl   -- MFSLives has no custom sysctls
     NULL,                                       // vfs_setattr  -- not needed for read-only file systems
-    {NULL, NULL, NULL, NULL, NULL, NULL, NULL}  // vfs_reserved
+    NULL,                                       // vfs_ioctl    -- added since original source release
+    NULL,                                       // vfs_vget_snapdir -- optional
+    NULL, NULL, NULL, NULL, NULL                // vfs_reserved
 };
 
 // gVFSEntry describes the overall VFS plug-in.  It's passed as a parameter 

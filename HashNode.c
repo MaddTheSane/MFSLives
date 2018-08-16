@@ -72,21 +72,6 @@ First checked in.
 
 /////////////////////////////////////////////////////////////////////
 
-// The lck_mtx_assert routine is only available via the "com.apple.kpi.unsupported" 
-// KPI.  I don't want to ship production code that uses this macro, so I 
-// use a cover macro (LCK_MTX_ASSERT) that maps to lck_mtx_assert for debug builds 
-// and nothing for production builds.  I also preprocess the KEXT's Info.plist 
-// so that I only include "com.apple.kpi.unsupported" in the OSBundleLibraries 
-// dictionary in the debug build.
-
-#if MACH_ASSERT
-    #define LCK_MTX_ASSERT lck_mtx_assert
-#else
-    #define LCK_MTX_ASSERT(gHashMutex, LCK_MTX_ASSERT_OWNED) do { } while (0)
-#endif
-
-/////////////////////////////////////////////////////////////////////
-
 // The HNode structure represents an entry in the VFS plug-ins hash table.  See 
 // the comments in the header file for a detailed description of the relationship 
 // between this data structure and the vnodes that are maintained by VFS itself. 
